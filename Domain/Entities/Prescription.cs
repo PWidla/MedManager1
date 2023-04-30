@@ -11,7 +11,9 @@ namespace Domain.Entities
         public DateTime? ExpiresAt { get; set; }
         public string Medicines { get; set; }
         public string Description { get; set; }
-        public Doctor Doctor { get; set; }
-        public Patient Patient { get; set; }
+        public int PatientId { get; set; }
+        public virtual Patient Patient { get; set; }
+        public int DoctorId { get; set; }
+        public virtual Doctor Doctor { get; set; }
     }
 }

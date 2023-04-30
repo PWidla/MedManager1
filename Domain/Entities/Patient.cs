@@ -1,10 +1,6 @@
-﻿using MedicalDataManagementApp.Core.Entities;
-using System;
-using System.Collections.Generic;
+﻿using Domain.Common;
+using MedicalDataManagementApp.Core.Entities;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Domain.Entities
 {
@@ -14,5 +10,8 @@ namespace Domain.Entities
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string? MedicalHistory { get; set; }
+        public List<Appointment>? Appointments { get; set; }
+        public List<MedicalRecord>? MedicalRecords { get; set; }
+        public List<Prescription>? Prescriptions { get; set; }
     }
 }
