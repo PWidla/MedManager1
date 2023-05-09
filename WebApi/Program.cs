@@ -1,7 +1,7 @@
 using FluentValidation;
-using MedicalDataManagementApp.Core.Entities;
-using MedicalDataManagementApp.Infrastructure.Validators;
 using Application;
+using Domain.Validators;
+using Domain.Entities;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +13,11 @@ builder.Services.AddApplication();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddTransient<IValidator<User>, UserValidator>();
+builder.Services.AddTransient<IValidator<Doctor>, DoctorValidator>();
+builder.Services.AddTransient<IValidator<Patient>, PatientValidator>();
+builder.Services.AddTransient<IValidator<Appointment>, AppointmentValidator>();
+builder.Services.AddTransient<IValidator<MedicalRecord>, MedicalRecordValidator>();
+builder.Services.AddTransient<IValidator<Prescription>, PrescriptionValidator>();
 
 
 var app = builder.Build();

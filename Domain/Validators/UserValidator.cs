@@ -1,7 +1,7 @@
-﻿using FluentValidation;
-using MedicalDataManagementApp.Core.Entities;
+﻿using Domain.Entities;
+using FluentValidation;
 
-namespace MedicalDataManagementApp.Infrastructure.Validators
+namespace Domain.Validators
 {
     public class UserValidator : AbstractValidator<User>
     {

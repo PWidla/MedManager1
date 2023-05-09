@@ -2,7 +2,7 @@
 using Domain.Enums;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace MedicalDataManagementApp.Core.Entities
+namespace Domain.Entities
 {
     [Table("User")]
     public class User : BaseEntity

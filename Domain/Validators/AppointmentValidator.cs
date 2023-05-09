@@ -1,7 +1,7 @@
 ﻿using FluentValidation;
 using Domain.Entities;
 
-namespace MedicalDataManagementApp.Infrastructure.Validators
+namespace Domain.Validators
 {
     public class AppointmentValidator : AbstractValidator<Appointment>
     {
