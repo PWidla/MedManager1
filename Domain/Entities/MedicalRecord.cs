@@ -8,8 +8,6 @@ namespace Domain.Entities
     {
         public int PatientId { get; set; }
         public virtual Patient Patient { get; set; }
-        public int DoctorId { get; set; }
-        public virtual Doctor Doctor { get; set; }
         public string MedicalHistory { get; set; }
     }
 }

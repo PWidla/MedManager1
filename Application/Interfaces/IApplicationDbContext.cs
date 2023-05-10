@@ -1,5 +1,4 @@
 ﻿using Domain.Entities;
-using MedicalDataManagementApp.Core.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace Application.Interfaces
@@ -13,6 +12,6 @@ namespace Application.Interfaces
         DbSet<Prescription> Prescriptions { get; set; }
         DbSet<User> Users { get; set; }
 
-        Task<int> SaveChanges();
+        Task<int> SaveChangesAsync();
     }
 }
