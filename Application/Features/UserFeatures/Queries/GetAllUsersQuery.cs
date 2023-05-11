@@ -2,17 +2,11 @@
 using Domain.Entities;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace Application.Features.UserFeatures.Queries
 {
     public class GetAllUsersQuery : IRequest<IEnumerable<User>>
     {
-
         public class GetAllUsersQueryHandler : IRequestHandler<GetAllUsersQuery, IEnumerable<User>>
         {
             private readonly IApplicationDbContext _context;
