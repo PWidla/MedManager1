@@ -1,6 +1,7 @@
 ﻿using Application.Interfaces;
 using Domain.Entities;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 
 namespace Application.Features.UserFeatures.Queries
 {
@@ -16,7 +17,7 @@ namespace Application.Features.UserFeatures.Queries
             }
             public async Task<User> Handle(GetUserByIdQuery query, CancellationToken cancellationToken)
             {
-                var user = _context.Users.Where(a => a.Id == query.Id).FirstOrDefault();
+                var user = await _context.Users.Where(a => a.Id == query.Id).FirstOrDefaultAsync();
                 if (user == null) return null;
                 return user;
             }
