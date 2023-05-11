@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Application.Features.ProductFeatures.Queries
+namespace Application.Features.UserFeatures.Queries
 {
     public class GetAllUsersQuery : IRequest<IEnumerable<User>>
     {

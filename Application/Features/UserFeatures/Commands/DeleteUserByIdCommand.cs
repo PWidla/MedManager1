@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Application.Features.ProductFeatures.Commands
+namespace Application.Features.UserFeatures.Commands
 {
     public class DeleteUserByIdCommand : IRequest<int>
     {

@@ -1,14 +1,8 @@
 ﻿using Application.Interfaces;
 using Domain.Entities;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 
-namespace Application.Features.ProductFeatures.Queries
+namespace Application.Features.UserFeatures.Queries
 {
     public class GetUserByIdQuery : IRequest<User>
     {
