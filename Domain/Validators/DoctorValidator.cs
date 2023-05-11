@@ -13,8 +13,13 @@ namespace Domain.Validators
             RuleFor(d => d.LastName)
                 .NotEmpty().WithMessage("Last name is required.");
 
+            RuleFor(u => u.Role)
+                .NotNull().WithMessage("Role is required.")
+                .IsInEnum().WithMessage("Invalid role.");
+
             RuleFor(d => d.Specialization)
-                .NotEmpty().WithMessage("Specialization is required.");
+                .NotNull().WithMessage("Specialization is required.")
+                .IsInEnum().WithMessage("Invalid role.");
         }
     }
 }

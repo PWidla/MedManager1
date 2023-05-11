@@ -19,7 +19,6 @@ namespace Domain.Validators
                 .NotEmpty().WithMessage("Date of birth is required.")
                 .Must(dob => dob < DateTime.UtcNow.AddYears(-18)).WithMessage("You must be at least 18 years old.");
 
-
             RuleFor(u => u.Role)
                 .NotNull().WithMessage("Role is required.")
                 .IsInEnum().WithMessage("Invalid role.");
