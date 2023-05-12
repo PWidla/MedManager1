@@ -16,12 +16,12 @@ namespace Application.Features.DoctorFeatures.Queries
             }
             public async Task<IEnumerable<Doctor>> Handle(GetAllDoctorsQuery query, CancellationToken cancellationToken)
             {
-                var doctorList = await _context.Doctors.ToListAsync();
-                if (doctorList == null)
+                var doctorsList = await _context.Doctors.ToListAsync();
+                if (doctorsList == null)
                 {
                     return null;
                 }
-                return doctorList.AsReadOnly();
+                return doctorsList.AsReadOnly();
             }
         }
     }
