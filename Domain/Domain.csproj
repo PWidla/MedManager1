@@ -14,4 +14,13 @@
     <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.5.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Application\Application.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Specifications\Doctor\" />
+    <Folder Include="Specifications\Patient\" />
+  </ItemGroup>
+
 </Project>
