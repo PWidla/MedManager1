@@ -1,6 +1,5 @@
 ﻿using Domain.Entities;
 using FluentValidation;
-using MedicalDataManagementApp.Core.Entities;
 
 namespace Domain.Validators
 {
