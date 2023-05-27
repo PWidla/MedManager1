@@ -1,4 +1,7 @@
-﻿using Infrastructure.Persistence.Context;
+﻿using Application.Repository;
+using Application.Specification;
+using Infrastructure.EF;
+using Infrastructure.Persistence.Context;
 using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Persistence.Repositories
