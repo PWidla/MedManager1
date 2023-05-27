@@ -17,7 +17,7 @@ namespace Infrastructure.Persistence.Repositories
             _dbSet = context.Set<T>();
         }
 
-        public IEnumerable<T> Find(ISpecification<T> specification = null)
+        public IEnumerable<T> Get(ISpecification<T> specification = null)
         {
             var query = _dbSet.AsQueryable();
             if (specification != null)
@@ -27,22 +27,22 @@ namespace Infrastructure.Persistence.Repositories
             return query.ToList();
         }
 
-        public async Task<T?> FindByIdAsync(K id)
+        public async Task<T?> GetByIdAsync(K id)
         {
             return await _dbSet.FindAsync(id);
         }
 
-        public async Task<List<T>> FindAllAsync()
+        public async Task<List<T>> GetAllAsync()
         {
             return await _dbSet.ToListAsync();
         }
 
-        public T? FindById(K id)
+        public T? GetById(K id)
         {
             return _dbSet.Find(id);
         }
 
-        public List<T> FindAll()
+        public List<T> GetAll()
         {
             return _dbSet.ToList();
         }
@@ -71,7 +71,7 @@ namespace Infrastructure.Persistence.Repositories
             }
         }
 
-        public IEnumerable<T> FindBySpecification(ISpecification<T> specification = null)
+        public IEnumerable<T> GetBySpecification(ISpecification<T> specification = null)
         {
             var query = _dbSet.AsQueryable();
             if (specification != null)

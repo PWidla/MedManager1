@@ -4,18 +4,18 @@ namespace Application.Repository
 {
     public interface IGenericRepository<T, K> where T : IIdentity<K> where K : IComparable<K>
     {
-        Task<T?> FindByIdAsync(K id);
-        Task<List<T>> FindAllAsync();
+        Task<T?> GetByIdAsync(K id);
+        Task<List<T>> GetAllAsync();
 
-        T? FindById(K id);
+        T? GetById(K id);
 
-        List<T> FindAll();
+        List<T> GetAll();
         T Add(T o);
 
         void RemoveById(K id);
 
         void Update(K id, T o);
 
-        IEnumerable<T> FindBySpecification(ISpecification<T> specification = null);
+        IEnumerable<T> GetBySpecification(ISpecification<T> specification = null);
     }
 }
