@@ -2,7 +2,6 @@ using FluentValidation;
 using Application;
 using Domain.Validators;
 using Domain.Entities;
-using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 

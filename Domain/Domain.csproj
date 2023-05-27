@@ -19,7 +19,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Specifications\Doctor\" />
     <Folder Include="Specifications\Patient\" />
   </ItemGroup>
 

@@ -2,9 +2,9 @@
 
 namespace Domain.Specifications.Prescription
 {
-    public class PrescriptionByDoctor : BaseSpecification<Entities.Prescription>
+    public class PrescriptionsByDoctor : BaseSpecification<Entities.Prescription>
     {
-        public PrescriptionByDoctor(int doctorId) : base(prescription => prescription.DoctorId == doctorId)
+        public PrescriptionsByDoctor(int doctorId) : base(prescription => prescription.DoctorId == doctorId)
         {
             AddInclude(prescription => prescription.Doctor);
             AddInclude(prescription => prescription.Patient);
