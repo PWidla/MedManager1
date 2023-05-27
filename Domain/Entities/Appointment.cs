@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Domain.Entities
 {
     [Table("Appointment")]
-    public class Appointment : BaseEntity
+    public class Appointment : BaseEntity<int>
     {
         public DateTime Date { get; set; }
         public string Description { get; set; }

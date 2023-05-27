@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Domain.Entities
 {
     [Table("Prescription")]
-    public class Prescription : BaseEntity
+    public class Prescription : BaseEntity<int>
     {
         public DateTime CreatedAt { get; set; }
         public DateTime? ExpiresAt { get; set; }

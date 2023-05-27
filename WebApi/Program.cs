@@ -17,7 +17,6 @@ builder.Services.AddTransient<IValidator<User>, UserValidator>();
 builder.Services.AddTransient<IValidator<Doctor>, DoctorValidator>();
 builder.Services.AddTransient<IValidator<Patient>, PatientValidator>();
 builder.Services.AddTransient<IValidator<Appointment>, AppointmentValidator>();
-builder.Services.AddTransient<IValidator<MedicalRecord>, MedicalRecordValidator>();
 builder.Services.AddTransient<IValidator<Prescription>, PrescriptionValidator>();
 
 
