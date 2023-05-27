@@ -42,6 +42,8 @@ namespace Infrastructure.Persistence.Context
                 .WithMany(d => d.Appointments)
                 .HasForeignKey(a => a.DoctorId);
 
+            modelBuilder.SeedData();
+
             base.OnModelCreating(modelBuilder);
         }
 
