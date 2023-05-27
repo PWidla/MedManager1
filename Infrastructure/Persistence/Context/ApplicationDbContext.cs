@@ -32,6 +32,16 @@ namespace Infrastructure.Persistence.Context
                 .WithOne(p => p.Doctor)
                 .HasForeignKey(p => p.DoctorId);
 
+            modelBuilder.Entity<Appointment>()
+               .HasOne(a => a.Patient)
+               .WithMany(p => p.Appointments)
+               .HasForeignKey(a => a.PatientId);
+
+            modelBuilder.Entity<Appointment>()
+                .HasOne(a => a.Doctor)
+                .WithMany(d => d.Appointments)
+                .HasForeignKey(a => a.DoctorId);
+
             base.OnModelCreating(modelBuilder);
         }
 
