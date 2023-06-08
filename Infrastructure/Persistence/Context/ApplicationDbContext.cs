@@ -1,4 +1,5 @@
 ﻿using Domain.Entities;
+using Infrastructure.Persistence.Seed;
 using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Persistence.Context
@@ -47,7 +48,7 @@ namespace Infrastructure.Persistence.Context
                 .WithMany(d => d.Appointments)
                 .HasForeignKey(a => a.DoctorId);
 
-            modelBuilder.Seed();
+            ModelBuilderExtensions.Seed(modelBuilder);
 
             base.OnModelCreating(modelBuilder);
         }

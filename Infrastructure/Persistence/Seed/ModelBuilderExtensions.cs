@@ -1,11 +1,9 @@
-﻿using Infrastructure.Persistence.Context;
-using Domain.Entities;
+﻿using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
-using System;
 
 namespace Infrastructure.Persistence.Seed
 {
-    public static class SeedData
+    public static class ModelBuilderExtensions
     {
         public static void Seed(ModelBuilder modelBuilder)
         {
