@@ -37,16 +37,6 @@ namespace Infrastructure.Persistence.Repositories
             return await _dbSet.ToListAsync();
         }
 
-        public T? GetById(K id)
-        {
-            return _dbSet.Find(id);
-        }
-
-        public List<T> GetAll()
-        {
-            return _dbSet.ToList();
-        }
-
         public T Add(T entity)
         {
             _dbSet.Add(entity);
