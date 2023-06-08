@@ -7,9 +7,11 @@ namespace Domain.Validators
     {
         public AdminValidator()
         {
-            RuleFor(a => a.Nickname)
-                .NotEmpty().WithMessage("Nickname address is required.")
-                .MinimumLength(8).WithMessage("Nickname must be at least 3 characters long.");
+            RuleFor(a => a.FirstName)
+                .NotEmpty().WithMessage("First Name is required.");
+
+            RuleFor(a => a.LastName)
+                .NotEmpty().WithMessage("Last Name is required.");
 
             RuleFor(u => u.EmailAddress)
                  .NotEmpty().WithMessage("Email address is required.")

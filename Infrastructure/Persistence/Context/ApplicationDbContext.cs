@@ -11,11 +11,6 @@ namespace Infrastructure.Persistence.Context
         {
         }
 
-        public void SeedData(ModelBuilder modelBuilder)
-        {
-            // Dodaj tutaj kod seedujący, tworzący rekordy w bazie danych
-        }
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Patient>()

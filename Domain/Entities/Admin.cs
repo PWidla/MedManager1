@@ -8,7 +8,8 @@ namespace Domain.Entities
     [Table("Admin")]
     public class Admin : BaseEntity<int>
     {
-        public string Nickname { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
         [DataType(DataType.EmailAddress)]
         public string EmailAddress { get; set; }
         [DataType(DataType.Password)]
