@@ -10,6 +10,11 @@ namespace Infrastructure.Persistence.Context
         {
         }
 
+        public void SeedData(ModelBuilder modelBuilder)
+        {
+            // Dodaj tutaj kod seedujący, tworzący rekordy w bazie danych
+        }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Patient>()
@@ -42,7 +47,7 @@ namespace Infrastructure.Persistence.Context
                 .WithMany(d => d.Appointments)
                 .HasForeignKey(a => a.DoctorId);
 
-            modelBuilder.SeedData();
+            modelBuilder.Seed();
 
             base.OnModelCreating(modelBuilder);
         }
@@ -52,7 +57,6 @@ namespace Infrastructure.Persistence.Context
         public DbSet<Doctor> Doctors { get; set; }
         public DbSet<Patient> Patients { get; set; }
         public DbSet<Prescription> Prescriptions { get; set; }
-        public DbSet<User> Users { get; set; }
         public DbSet<Admin> Admins { get; set; }
         public async Task<int> SaveChangesAsync()
         {
