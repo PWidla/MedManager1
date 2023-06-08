@@ -1,12 +1,12 @@
-﻿using Domain.Common;
-using System;
+﻿using Application.Repository;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Domain.Entities
 {
     [Table("Prescription")]
-    public class Prescription : BaseEntity<int>
+    public class Prescription : IIdentity<int>
     {
+        public int Id { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime? ExpiresAt { get; set; }
         public string Medicines { get; set; }

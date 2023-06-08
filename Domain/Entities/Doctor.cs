@@ -1,4 +1,4 @@
-﻿using Domain.Common;
+﻿using Application.Repository;
 using Domain.Enums;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -6,8 +6,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Domain.Entities
 {
     [Table("Doctor")]
-    public class Doctor : BaseEntity<int>
+    public class Doctor : IIdentity<int>
     {
+        public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         [DataType(DataType.EmailAddress)]

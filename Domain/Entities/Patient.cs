@@ -1,4 +1,4 @@
-﻿using Domain.Common;
+﻿using Application.Repository;
 using Domain.Enums;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -6,8 +6,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Domain.Entities
 {
     [Table("Patient")]
-    public class Patient : BaseEntity<int>
+    public class Patient : IIdentity<int>
     {
+        public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string MedicalHistory { get; set; }
