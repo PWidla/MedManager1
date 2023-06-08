@@ -12,7 +12,8 @@ namespace Infrastructure.Persistence.Seed
                 new Admin
                 {
                     Id = 1,
-                    Nickname = "admin",
+                    FirstName = "Danny",
+                    LastName = "Brown",
                     EmailAddress = "admin@example.com",
                     Password = "admin123",
                     DateOfBirth = new DateTime(1990, 1, 1)

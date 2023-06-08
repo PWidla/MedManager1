@@ -17,7 +17,7 @@ namespace Infrastructure.Persistence.Repositories
             _dbSet = context.Set<T>();
         }
 
-        public IEnumerable<T> Get(ISpecification<T> specification = null)
+        public IEnumerable<T> Get(ISpecification<T>? specification = null)
         {
             var query = _dbSet.AsQueryable();
             if (specification != null)
@@ -71,7 +71,7 @@ namespace Infrastructure.Persistence.Repositories
             }
         }
 
-        public IEnumerable<T> GetBySpecification(ISpecification<T> specification = null)
+        public IEnumerable<T> GetBySpecification(ISpecification<T>? specification = null)
         {
             var query = _dbSet.AsQueryable();
             if (specification != null)
